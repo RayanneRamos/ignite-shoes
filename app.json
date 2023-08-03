@@ -18,19 +18,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rockeseat.igniteshoes"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
-      }
+      },
+      "package": "com.rockeseat.igniteshoes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      ["onesignal-expo-plugin",
+      [
+        "onesignal-expo-plugin",
         {
           "mode": "development"
         }
