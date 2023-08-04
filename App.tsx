@@ -5,7 +5,7 @@ import {
   Roboto_400Regular,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
-import OneSignal from "react-native-onesignal";
+import OneSignal, { NotificationReceivedEvent } from "react-native-onesignal";
 
 import { Routes } from "./src/routes";
 
@@ -17,6 +17,7 @@ import {
   tagUserEmailCreate,
   tagUserInfoCreate,
 } from "./src/notifications/notificationsTags";
+import { useEffect } from "react";
 
 OneSignal.setAppId("f8d15092-f1cb-4e45-a3cc-ccc3e631e1d2");
 OneSignal.setEmail("rayanneramos@gmail.com");
@@ -30,6 +31,15 @@ export default function App() {
 
   tagUserEmailCreate("rayanneramos@gmail.com");
   tagUserInfoCreate();
+
+  useEffect(() => {
+    const unsubscribe = OneSignal.setNotificationWillShowInForegroundHandler(
+      (notificationReceivedEvent: NotificationReceivedEvent) => {
+        console.log(notificationReceivedEvent);
+      }
+    );
+    return () => unsubscribe;
+  }, []);
 
   return (
     <NativeBaseProvider theme={THEME}>
