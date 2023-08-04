@@ -7,3 +7,10 @@ export function tagUserEmailCreate(email: string) {
 export function deleteTag() {
   OneSignal.deleteTag("user_email");
 }
+
+export function tagUserInfoCreate() {
+  OneSignal.sendTags({
+    user_name: "Rayanne",
+    user_email: "rayanneramos@gmail.com",
+  });
+}
