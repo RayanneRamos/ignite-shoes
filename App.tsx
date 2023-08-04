@@ -13,12 +13,19 @@ import { THEME } from "./src/theme";
 import { Loading } from "./src/components/Loading";
 
 import { CartContextProvider } from "./src/contexts/CartContext";
+import { tagUserEmailCreate } from "./src/notifications/notificationsTags";
 
 OneSignal.setAppId("f8d15092-f1cb-4e45-a3cc-ccc3e631e1d2");
 OneSignal.setEmail("rayanneramos@gmail.com");
 
+OneSignal.promptForPushNotificationsWithUserResponse((response) => {
+  console.log(response);
+});
+
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+
+  tagUserEmailCreate("rayanneramos@gmail.com");
 
   return (
     <NativeBaseProvider theme={THEME}>
