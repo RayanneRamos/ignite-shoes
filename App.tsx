@@ -17,6 +17,7 @@ import {
   tagUserEmailCreate,
   tagUserInfoCreate,
 } from "./src/notifications/notificationsTags";
+import { useEffect } from "react";
 
 OneSignal.setAppId("f8d15092-f1cb-4e45-a3cc-ccc3e631e1d2");
 OneSignal.setEmail("rayanneramos@gmail.com");
@@ -30,6 +31,13 @@ export default function App() {
 
   tagUserEmailCreate("rayanneramos@gmail.com");
   tagUserInfoCreate();
+
+  useEffect(() => {
+    const unsubscribe = OneSignal.setNotificationOpenedHandler(() => {
+      console.log("Notificação aberta!");
+    });
+    return () => unsubscribe;
+  }, []);
 
   return (
     <NativeBaseProvider theme={THEME}>
