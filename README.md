@@ -16,6 +16,13 @@
 
 [Ignite Shoes]() é o segundo projeto desenvolvido durante o bootcamp ignite da [Rocketseat](https://www.rocketseat.com.br/) que foca nas tecnologias ReactJS, React Native e NodeJS. Consiste em criar uma aplicação de um ecommerce de um shopping que envia notificações para seus usuários, dando alguns feedbacks pro usuário fechar o carrinho ou adicionar novos produtos. Disponível nas plataformas Android e IOS.
 
+## 🌟 Funcionalidades
+
+1. **Navegação de produtos de um shopping, com opções de adição ao carrinho**
+2. **Notificações push para incentivar o fechamento do carrinho ou adição de mais itens**
+3. **Integração com o backend para garantir uma experiência de compra fluida**
+4. **Disponível para Android e iOS, garantindo a acessibilidade em dispositivos móveis**
+
 ## 🧪 Technologies
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
