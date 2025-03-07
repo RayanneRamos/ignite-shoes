@@ -23,7 +23,7 @@
 3. **Integração com o backend para garantir uma experiência de compra fluida**
 4. **Disponível para Android e iOS, garantindo a acessibilidade em dispositivos móveis**
 
-## 🧪 Technologies
+## 🧪 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
